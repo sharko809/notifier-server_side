@@ -59,11 +59,10 @@ public class Media implements Runnable {
 	@Override
 	public void run() {
 		try {
-//			playClip(this.getClass().getResource("sound/wof3.aiff"));
 			playClip(new File("wof3.aiff"));
 		} catch (IOException | UnsupportedAudioFileException
 				| LineUnavailableException | InterruptedException e) {
-			// TODO Auto-generated catch block
+			// TODO try to play once more
 			e.printStackTrace();
 		}
 	}
